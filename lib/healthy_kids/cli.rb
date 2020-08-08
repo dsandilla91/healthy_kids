@@ -1,12 +1,12 @@
 class HealthyKids::CLI 
 def call 
   puts "Greetings!"
-  month 
+  labels 
 end 
  
-def month
-  @months = ['Nutrition', 'Recipes', 'Recommended']
-  @months.each_with_index  { |i, n|
+def labels
+  @labels = ['Nutritional', 'Recipes', 'Recommended']
+  @labels.each_with_index  { |i, n|
     puts "#{n + 1}. #{i}"
   }
  end 
