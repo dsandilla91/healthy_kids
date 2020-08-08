@@ -5,10 +5,10 @@ def call
 end 
  
 def month
-  @months = ['sep19', 'oct19', 'nov19']
-   @months.each_with_index  { |i, n|
-     puts "#{i} #{n}"
-   }
+  @months = ['Nutrition', 'Recipes', 'Recommended']
+  @months.each_with_index  { |i, n|
+    puts "#{n + 1}. #{i}"
+  }
  end 
  end
  
