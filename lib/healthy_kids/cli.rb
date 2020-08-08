@@ -9,7 +9,7 @@ class HealthyKids::CLI
   end 
    
    def list_healthy_tip
-     @tip.each_with_index(1) do |tip, index|
+     @tip.each.with_index(1) do |tip, index|
        puts "#{index}. #{tip}"
  end 
 end
