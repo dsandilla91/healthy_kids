@@ -1,7 +1,7 @@
 require_relative "healthy_kids/version"
 require_relative "healthy_kids/cli"
 
-reuire "pry"
+require "pry"
 
 module HealthyKids
   class Error < StandardError; end
