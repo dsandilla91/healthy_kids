@@ -1,15 +1,14 @@
 class HealthyKids::CLI 
- def call 
-   puts "Greetings!"
- end 
+def call 
+  puts "Greetings!"
+  month 
+end 
  
-def get_ad_month
+def month
   @months = ['sep19', 'oct19', 'nov19']
- end 
- 
- def user_month
-   @months.each_with_index  { |index, month|
-     puts "#{index} #{month}"
+   @months.each_with_index  { |i, n|
+     puts "#{i} #{n}"
    }
  end 
- end 
+ end
+ 
