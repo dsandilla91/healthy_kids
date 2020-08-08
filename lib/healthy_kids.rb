@@ -1,4 +1,7 @@
-require "healthy_kids/version"
+require_relative "healthy_kids/version"
+require_relative "healthy_kids/cli"
+
+reuire "pry"
 
 module HealthyKids
   class Error < StandardError; end
