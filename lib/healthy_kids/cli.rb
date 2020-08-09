@@ -7,7 +7,6 @@ def call
 end 
  
  def labels
-  HealthyKids::Scraper.scrape_work  
   @labels = HealthyKids::Labeled.all 
 end
  
@@ -20,19 +19,15 @@ end
  
  def get_labels
    this_selected = gets.strip.to_i 
-  if valid_input(this_selected, @labels)
-    show_the_selection(this_selected)
+  show_this_selection(this_selected) if valid_input(this_selected, @labels)
  end
    
  def valid_input(input, data)
    input.to_i <= data.length && input.to_i > 0 
  end 
  
- def show_selection_for(this_selected)
+ def show_this_selection(this_selected)
    label = @labels[this_selected - 1]
    puts "You selected: #{label}"
- end 
- end 
-
- 
- 
+ end
+ end

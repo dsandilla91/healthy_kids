@@ -7,10 +7,3 @@ class HealthyKids::Scraper
      months.each do |m|
        name = m.text 
        HealthyKids::Labeled.new(name)
-    
-    
-    
-    
-    
-    
-    
