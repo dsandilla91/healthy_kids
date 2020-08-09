@@ -2,7 +2,7 @@ class HealthyKids::CLI
 def call 
   puts "Greetings!"
   labels
-  list_labels
+  selected_labels
   get_labels
 end 
  
@@ -13,8 +13,8 @@ end
  
 def selected_labels
   puts "Make a selection<3"
- @labels.each.with_index(1)  do |month, index|
-    puts "#{index}. #{month.name}"
+ @labels.each.with_index(1)  do |index, label|
+    puts "#{index}. #{label.name}"
  end 
 end 
  
