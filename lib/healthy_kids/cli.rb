@@ -2,20 +2,20 @@ class HealthyKids::CLI
 def call 
   puts "Greetings!"
   labels
-  selected_labels
+  list_labels
   get_labels
 end 
  
  def labels
-  @labels = ['Nutritional', 'Recipes', 'Recommendations']
+  @labels = HealthyKids::Labeled.all 
 end
  
 def selected_labels
   puts "Make a selection<3"
- @labels.each.with_index(1)  do |month, i|
-    puts "#{index}. #{month}"
+ @labels.each.with_index(1)  do |month, index|
+    puts "#{index}. #{month.name}"
  end 
- end
+end 
  
  def get_labels
    selection = gets.strip
