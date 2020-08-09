@@ -19,17 +19,17 @@ def selected_labels
 end 
  
  def get_labels
-   selection = gets.strip
-  if valid_input(selection, @labels)
-    show_the_selection
+   this_selected = gets.strip.to_i 
+  if valid_input(this_selected, @labels)
+    show_the_selection(this_selected)
  end
    
  def valid_input(input, data)
    input.to_i <= data.length && input.to_i > 0 
  end 
  
- def show _selection_for(selection)
-   label = @labels[selection - 1]
+ def show_selection_for(this_selected)
+   label = @labels[this_selected - 1]
    puts "You selected: #{label}"
  end 
  end 
