@@ -8,7 +8,7 @@ class HealthyKids::Labeled
   end 
   
   def self.all 
-    HealthyKids::Scraper, scrape_months if @@all.empty
+    HealthyKids::Scraper, scrape_months if @@all.empty? 
     @@all
   end 
   

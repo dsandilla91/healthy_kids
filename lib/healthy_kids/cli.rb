@@ -7,6 +7,7 @@ def call
 end 
  
  def labels
+  HealthyKids::Scraper.scrape_work  
   @labels = HealthyKids::Labeled.all 
 end
  
