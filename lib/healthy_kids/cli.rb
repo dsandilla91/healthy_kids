@@ -12,8 +12,8 @@ end
  
 def selected_labels
   puts "Make a selection<3"
- @labels.each.with_index(1)  do |index, label|
-    puts "#{index}. #{label.name}"
+ @labels.each.with_index(1)  do |index, labeled|
+    puts "#{index}. #{labeled.name}"
  end 
 end 
  
@@ -27,7 +27,7 @@ end
  end 
  
  def show_this_selection(this_selected)
-   label = @labels[this_selected - 1]
-   puts "You selected: #{label}"
+   labeled = @labels[this_selected - 1]
+   puts "You selected: #{labeled.name}"
  end
  end

@@ -3,17 +3,17 @@ class HealthyKids::Labeled
   attr_accessor :name 
   
   def initialize(name)
-    @name = name 
-    save
-  end 
+    @@name = name
+    save 
+  end
   
   def self.all 
-    HealthyKids::Scraper.scrape_work if @@all.empty? 
+    HealthyKids::Scraper.scrape_work if 
     @@all
   end 
-  
-  def save 
-    @@all << self 
-  end 
-end 
     
+    def save
+      @@all << self 
+    end 
+  end 
+  
