@@ -12,7 +12,7 @@ end
  
 def selected_labels
   puts "Make a selection<3"
- @labels.each.with_index(1)  do |index, labeled|
+ @labels.each.with_index(1)  do |labeled, index|
     puts "#{index}. #{labeled.name}"
  end 
 end 
